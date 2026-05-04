@@ -1,17 +1,18 @@
-body{
-    background-color: white;
+.indexbody{
+    background-color: #f4f4f0;
     width: 100%;
     padding: 0;
     margin: 0;
     font-family: 'Source Serif 4', Georgia, serif;
 }
 
-main {
+.indexmain {
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 0 24px 24px;
-    max-width: 1280px;
+    width: 100%;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -22,6 +23,7 @@ main {
     height: 100px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: white;
     padding: 0 24px;
     border: 0px;
@@ -31,17 +33,17 @@ main {
     z-index: 100;
 }
 
-/*loge editor*/
+/*logo editor*/
 .logocontainer{
     align-self: center;
     height: 75px;
-    width:200px;
+    width: 200px;
     object-fit: contain;
 }
 
 /*Dit is de block dat de links inhoudt*/
 .linkcontainer{
-    width: 500px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -84,7 +86,7 @@ main {
     border-radius: 12px;
     overflow: hidden;
     display: flex;
-    min-height: 420px;
+    height: 100%;
     position: relative;
 }
 .introcontainer::before{
@@ -94,9 +96,9 @@ main {
     background:radial-gradient(ellipse at 20% 50%,#0e2342 0%,transparent 60%);
     pointer-events: none;
 }
-
 .introcontainerlinks{
     padding: 40px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,13 +106,12 @@ main {
     z-index: 1;
     flex: 1;
 }
-
 .introcontainertitle{
     font-family: 'Playfair Display', georgia, Serif;
     font-size: 26px;
     font-weight: 600;
-    max-width: 580px;
     width: 100%;
+    max-width: 420px;
     color: white;
     letter-spacing: -0.3px;
     margin: 0 0 28px 0;
@@ -122,30 +123,30 @@ main {
 }
 .introcontainerbody{
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 300;
-    max-width: 560px;
+    max-width: 1250px;
     color: rgba(255, 255, 255, 0.88);
     line-height: 1.78;
     margin-bottom: 36px;
 }
- .introcontainerbody b {
-      font-weight: 400;
-      color: #ffffff;
-      border-bottom: 1px solid rgba(126, 200, 227, 0.5);
-    }
+.introcontainerbody b {
+    font-weight: 400;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(126, 200, 227, 0.5);
+}
 .introcontainerrechts{
     position: relative;
     overflow: hidden;
-    width: 420px;
+    min-width: 420px;
     flex-shrink: 0;
 }
 .introcontainerrechts img{
-        width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
 }
 .introcontainerrechts::after{
        content: '';
@@ -153,7 +154,6 @@ main {
       top: 0; left: 0; bottom: 0; right: 0;
       background: linear-gradient(to right, #1a3a6e 0%, transparent 20%);
 }
-
 .btn-primary {
     display: inline-block;
     background-color: #7ec8e3;
@@ -233,7 +233,7 @@ main {
 }
 
 .dienst-card {
-    background: rgba(255,255,255,0.06);
+    background: rgb(255, 255, 255);
     border: 1px solid rgba(126, 200, 227, 0.2);
     border-radius: 10px;
     padding: 28px 24px;
@@ -263,7 +263,7 @@ main {
 .dienst-card ul {
     font-size: 14px;
     font-weight: 300;
-    color: rgba(255,255,255,0.82);
+    color: #023C7A;
     line-height: 1.75;
     margin: 0;
     padding-left: 0;
@@ -279,11 +279,180 @@ main {
 
 .dienst-footer {
     font-size: 13px !important;
-    color: rgba(255,255,255,0.55) !important;
+    color: rgb(2, 64, 131,0.7) !important;
     font-style: italic;
     border-top: 1px solid rgba(126,200,227,0.15);
     padding-top: 12px;
     margin-top: auto !important;
+}
+/* =============================================
+   QUOTES SECTIE
+   ============================================= */
+.quotes-sectie {
+    background-color: #023C7A;
+    border-radius: 12px;
+    padding: 56px 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quotes-sectie::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 80% 20%, #1a5fa8 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.quotes-tagline {
+    position: relative;
+    z-index: 1;
+}
+
+.quote-groot {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.quote-accent {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 120px;
+    line-height: 0.7;
+    color: rgba(126,200,227,0.25);
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.quote-groot p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.35;
+    margin: 0;
+    font-style: italic;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-kaart {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(126,200,227,0.18);
+    border-radius: 10px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quote-categorie {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7ec8e3;
+}
+
+.quote-kaart p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.stroom-oneliners {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(126,200,227,0.15);
+    padding-top: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.oneliner {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+}
+
+.oneliner-sep {
+    color: rgba(126,200,227,0.4);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+/* =============================================
+   AANPAK STAPPEN
+   ============================================= */
+.aanpak-stappen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.aanpak-stap {
+    display: grid;
+    grid-template-columns: 56px 1fr 220px;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(126,200,227,0.15);
+}
+
+.aanpak-stap:last-child {
+    border-bottom: none;
+}
+
+.aanpak-tekst h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #7ec8e3;
+    margin: 0 0 8px 0;
+}
+
+.aanpak-tekst p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.aanpak-foto {
+    width: 320px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid rgba(126,200,227,0.2);
+}
+
+.aanpak-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 .contactcontainer{
     display: flex;
@@ -299,4 +468,395 @@ main {
 .contactgegevens{
     color: white;
     text-decoration: none;   
+}
+
+/* ==============================================
+   RESPONSIVE.CSS
+ 
+   Breakpoints:
+     gsm    : max 480px
+     tablet : 481px – 768px
+     laptop : 769px – 1024px
+     pc     : 1025px+  (jouw bestaande stijlen)
+   ============================================= */
+ 
+/* ==============================================
+   NAVIGATIE – MOBIEL HAMBURGER MENU
+   ============================================= */
+ 
+/* Hamburger-knop (verborgen op pc/laptop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+}
+ 
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #023C7A;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+ 
+/* Mobiel nav-menu – verborgen tot open */
+.linkcontainer.mobile-open {
+    display: flex !important;
+}
+ 
+/* ==============================================
+   GSM  (≤ 480px)
+   ============================================= */
+@media (max-width: 480px) {
+ 
+    /* --- Navigatie --- */
+    .navcontainer {
+        height: auto;
+        padding: 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        border-radius: 0;          /* volledige breedte balk */
+    }
+ 
+    .logocontainer {
+        height: 48px;
+        width: 140px;
+    }
+ 
+    .hamburger {
+        display: flex;
+    }
+ 
+    .linkcontainer {
+        display: none;             /* verborgen tot hamburger geklikt */
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 0 8px;
+        border-top: 1px solid rgba(2, 60, 122, 0.1);
+        margin-top: 12px;
+    }
+ 
+    .linkNaarWebsite {
+        font-size: 18px;
+    }
+ 
+    /* --- Main padding --- */
+    main {
+        padding: 0 12px 12px;
+        gap: 16px;
+    }
+ 
+    /* --- Intro --- */
+    .introcontainer {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 10px;
+    }
+ 
+    .introcontainerlinks {
+        padding: 28px 20px 24px;
+    }
+ 
+    .introcontainertitle {
+        font-size: 20px;
+    }
+ 
+    .introcontainerbody {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+ 
+    .introcontainerrechts {
+        width: 100%;
+        height: 220px;
+        flex-shrink: 0;
+    }
+ 
+    .introcontainerrechts::after {
+        background: linear-gradient(to bottom, #1a3a6e 0%, transparent 30%);
+    }
+ 
+    /* --- Diensten --- */
+    .diensten-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+ 
+    /* --- Quotes --- */
+    .quotes-sectie {
+        padding: 36px 20px;
+    }
+ 
+    .quote-groot p {
+        font-size: 20px;
+    }
+ 
+    .quote-accent {
+        font-size: 72px;
+    }
+ 
+    .quotes-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+ 
+    .stroom-oneliners {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+ 
+    .oneliner-sep {
+        display: none;
+    }
+ 
+    /* --- Aanpak stappen --- */
+    .aanpak-stap {
+        grid-template-columns: 40px 1fr;
+        gap: 16px;
+        padding: 20px 0;
+    }
+ 
+    /* Foto verbergen op gsm */
+    .aanpak-foto {
+        display: none;
+    }
+ 
+    .aanpak-tekst h3 {
+        font-size: 16px;
+    }
+ 
+    .aanpak-tekst p {
+        font-size: 14px;
+    }
+ 
+    /* --- Sections --- */
+    .section-block-links {
+        padding: 28px 20px;
+    }
+ 
+    .section-block-title {
+        font-size: 22px;
+    }
+ 
+    /* --- Contact --- */
+    .contactcontainer {
+        padding: 24px 20px;
+        border-radius: 10px;
+    }
+}
+ 
+/* ==============================================
+   TABLET  (481px – 768px)
+   ============================================= */
+@media (min-width: 481px) and (max-width: 768px) {
+ 
+    /* --- Navigatie --- */
+    .navcontainer {
+        height: 80px;
+        padding: 0 20px;
+        border-radius: 10px;
+    }
+ 
+    .logocontainer {
+        height: 80px;
+        width: 160px;
+    }
+ 
+    .linkcontainer {
+        width: auto;
+        gap: 0;
+        justify-content: flex-end;
+    }
+ 
+    .linkNaarWebsite {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+ 
+    /* --- Main --- */
+    main {
+        padding: 0 16px 16px;
+        gap: 20px;
+    }
+ 
+    /* --- Intro --- */
+    .introcontainer {
+        flex-direction: column;
+        min-height: auto;
+    }
+ 
+    .introcontainerlinks {
+        padding: 36px 32px 28px;
+    }
+ 
+    .introcontainertitle {
+        font-size: 22px;
+    }
+ 
+    .introcontainerrechts {
+        width: 100%;
+        height: 280px;
+    }
+ 
+    .introcontainerrechts::after {
+        background: linear-gradient(to bottom, #1a3a6e 0%, transparent 25%);
+    }
+ 
+    /* --- Diensten --- */
+    .diensten-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+ 
+    /* --- Quotes --- */
+    .quotes-sectie {
+        padding: 44px 32px;
+    }
+ 
+    .quote-groot p {
+        font-size: 24px;
+    }
+ 
+    .quote-accent {
+        font-size: 90px;
+    }
+ 
+    .quotes-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+ 
+    /* --- Aanpak stappen --- */
+    .aanpak-stap {
+        grid-template-columns: 48px 1fr;
+        gap: 20px;
+    }
+ 
+    .aanpak-foto {
+        display: none;
+    }
+ 
+    /* --- Sections --- */
+    .section-block-links {
+        padding: 36px 32px;
+    }
+ 
+    .section-block-title {
+        font-size: 24px;
+    }
+ 
+    /* --- Contact --- */
+    .contactcontainer {
+        padding: 32px;
+    }
+}
+ 
+/* ==============================================
+   LAPTOP  (769px – 1024px)
+   ============================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+    /* --- Navigatie --- */
+    .navcontainer {
+        height: 90px;
+        padding: 0 24px;
+    }
+ 
+    .logocontainer {
+        height: 68px;
+        width: 180px;
+    }
+ 
+    .linkNaarWebsite {
+        font-size: 20px;
+    }
+ 
+    /* --- Main --- */
+    main {
+        padding: 0 20px 20px;
+        gap: 22px;
+    }
+ 
+
+    /* --- Intro --- */
+    .introcontainer{
+        min-height: 520px;
+    }
+    .introcontainerlinks {
+        padding: 36px;
+    }
+ 
+    .introcontainertitle {
+        font-size: 23px;
+    }
+ 
+    .introcontainerrechts {
+        width: 320px;
+    }
+ 
+    /* --- Diensten --- */
+    .diensten-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+ 
+    /* --- Quotes --- */
+    .quote-groot p {
+        font-size: 26px;
+    }
+ 
+    /* --- Aanpak stappen --- */
+    .aanpak-stap {
+        grid-template-columns: 56px 1fr 180px;
+        gap: 20px;
+    }
+ 
+    .aanpak-foto {
+        width: 180px;
+        height: 200px;
+    }
+}
+ 
+/* ==============================================
+   PC / GROOT SCHERM  (≥ 1025px)
+   Jouw bestaande stijlen gelden hier al.
+   Hieronder alleen kleine verfijningen.
+   ============================================= */
+@media (min-width: 1025px) {
+ 
+    .hamburger {
+        display: none;
+    }
+ 
+    .linkcontainer {
+        display: flex !important;  /* altijd zichtbaar */
+    }
+ 
+    .diensten-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ 
+    .introcontainerrechts {
+        width: 300px;
+    }
+    .introcontainertitle{
+        font-size: 70px;
+    }
+    .introcontainer{
+        min-height: 1440px;
+        max-width: 1840px;
+    }
 }

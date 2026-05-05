@@ -154,6 +154,9 @@
       top: 0; left: 0; bottom: 0; right: 0;
       background: linear-gradient(to right, #1a3a6e 0%, transparent 20%);
 }
+/* =============================================
+   KNOPPEN
+   ============================================= */
 .btn-primary {
     display: inline-block;
     background-color: #7ec8e3;
@@ -171,7 +174,16 @@
     background-color: #5ab8d8;
     transform: translateY(-1px);
 }
+.btn-dark {
+    background-color: #023C7A;
+    color: white;
+    border: 2px solid #023C7A;
+    max-width: 16%;
+}
 
+.btn-dark:hover {
+    background-color: #012d5c;
+}
 /* =============================================
    wat we doen
    ============================================= */
@@ -454,6 +466,98 @@
     object-position: center top;
     display: block;
 }
+/* =============================================
+   OVER STROOM
+   ============================================= */
+.over-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.over-foto {
+    width: 380px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.over-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.over-tekst {
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.over-tagline {
+    color: rgba(2,60,122,0.45);
+    letter-spacing: 3px;
+}
+
+.over-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #023C7A;
+    margin: 0 0 24px 0;
+}
+
+.over-lead {
+    font-size: 17px;
+    color: #023C7A;
+    line-height: 1.75;
+    margin: 0 0 20px 0;
+}
+
+.over-lead em {
+    font-style: italic;
+    color: #1a5fa8;
+}
+
+.over-body {
+    font-size: 15px;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.8;
+    margin: 0 0 24px 0;
+}
+
+.over-punten {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.over-punten li {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+.over-punten li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #7ec8e3;
+}
+/* =============================================
+   FOOTER
+   ============================================= */
 .contactcontainer{
     display: flex;
     color: white;
@@ -513,24 +617,21 @@
 }
  
 /* ==============================================
-   GSM  (≤ 480px)
+   TABLET  (481px – 768px)
    ============================================= */
-@media (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 1079px) {
  
-    /* --- Navigatie --- */
+    /* Nav */
     .navcontainer {
-        height: auto;
-        padding: 16px;
-        flex-wrap: wrap;
+        height: 70px;
+        padding: 0 20px;
+        border-radius: 10px;
         justify-content: space-between;
-        position: sticky;
-        top: 0;
-        border-radius: 0;          /* volledige breedte balk */
     }
  
     .logocontainer {
-        height: 48px;
-        width: 140px;
+        height: 50px;
+        width: 150px;
     }
  
     .hamburger {
@@ -538,73 +639,78 @@
     }
  
     .linkcontainer {
-        display: none;             /* verborgen tot hamburger geklikt */
+        display: none;
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-        padding: 16px 0 8px;
+        padding: 16px 0 10px;
         border-top: 1px solid rgba(2, 60, 122, 0.1);
         margin-top: 12px;
     }
  
     .linkNaarWebsite {
         font-size: 18px;
+        padding: 0;
     }
  
-    /* --- Main padding --- */
-    main {
-        padding: 0 12px 12px;
+    /* Main */
+    .indexmain {
+        padding: 0 16px 16px;
         gap: 16px;
+        max-width: 100%;
     }
  
-    /* --- Intro --- */
+    /* Intro: stapelt op tablet */
     .introcontainer {
         flex-direction: column;
         min-height: auto;
-        border-radius: 10px;
+        max-width: 75%;
+        align-self: center;
     }
  
     .introcontainerlinks {
-        padding: 28px 20px 24px;
+        padding: 32px 24px 24px;
     }
  
     .introcontainertitle {
-        font-size: 20px;
+        font-size: 22px;
     }
  
     .introcontainerbody {
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 24px;
     }
  
     .introcontainerrechts {
-        width: 100%;
-        height: 220px;
-        flex-shrink: 0;
+        display:none;
     }
  
     .introcontainerrechts::after {
         background: linear-gradient(to bottom, #1a3a6e 0%, transparent 30%);
     }
- 
-    /* --- Diensten --- */
-    .diensten-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .section-block{
+        max-width: 75%;
+        align-self: center;
     }
  
-    /* --- Quotes --- */
+    /* Diensten: 2 kolommen */
+    .diensten-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+ 
+    /* Quotes */
     .quotes-sectie {
-        padding: 36px 20px;
+        padding: 40px 28px;
     }
  
     .quote-groot p {
-        font-size: 20px;
+        font-size: 22px;
     }
  
     .quote-accent {
-        font-size: 72px;
+        font-size: 80px;
     }
  
     .quotes-grid {
@@ -622,14 +728,13 @@
         display: none;
     }
  
-    /* --- Aanpak stappen --- */
+    /* Aanpak */
     .aanpak-stap {
-        grid-template-columns: 40px 1fr;
-        gap: 16px;
-        padding: 20px 0;
+        grid-template-columns: 48px 1fr;
+        gap: 18px;
+        padding: 22px 0;
     }
  
-    /* Foto verbergen op gsm */
     .aanpak-foto {
         display: none;
     }
@@ -642,221 +747,251 @@
         font-size: 14px;
     }
  
-    /* --- Sections --- */
+    /* Over: stapelt op tablet */
+    .over-container {
+        flex-direction: column;
+        max-width: 75%;
+        align-self: center;
+    }
+ 
+    .over-foto {
+        width: 100%;
+        height: 260px;
+    }
+ 
+    .over-tekst {
+        padding: 32px 24px;
+    }
+ 
+    .over-title {
+        font-size: 22px;
+    }
+ 
+    .over-lead {
+        font-size: 15px;
+    }
+ 
+    /* Sections */
     .section-block-links {
-        padding: 28px 20px;
+        padding: 32px 24px;
     }
  
     .section-block-title {
         font-size: 22px;
     }
  
-    /* --- Contact --- */
+    /* Contact */
     .contactcontainer {
-        padding: 24px 20px;
-        border-radius: 10px;
+        padding: 32px 24px;
     }
 }
  
 /* ==============================================
-   TABLET  (481px – 768px)
+   GSM  (≤ 480px)
    ============================================= */
-@media (min-width: 481px) and (max-width: 768px) {
- 
-    /* --- Navigatie --- */
+@media (max-width: 480px) {
+    
+    /* Nav */
     .navcontainer {
-        height: 80px;
-        padding: 0 20px;
-        border-radius: 10px;
+        height: auto;
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        border-radius: 0;
     }
  
     .logocontainer {
-        height: 80px;
-        width: 160px;
+        height: 40px;
+        width: 120px;
+    }
+ 
+    .hamburger {
+        display: flex;
     }
  
     .linkcontainer {
-        width: auto;
-        gap: 0;
-        justify-content: flex-end;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 0 8px;
+        border-top: 1px solid rgba(2, 60, 122, 0.1);
+        margin-top: 10px;
     }
  
     .linkNaarWebsite {
-        font-size: 18px;
-        padding: 0 10px;
+        font-size: 17px;
     }
  
-    /* --- Main --- */
-    main {
-        padding: 0 16px 16px;
-        gap: 20px;
+    /* Main */
+    .indexmain {
+        padding: 0 12px 12px;
+        gap: 12px;
+        max-width: 90%;
     }
  
-    /* --- Intro --- */
+    /* Intro */
     .introcontainer {
         flex-direction: column;
         min-height: auto;
+        border-radius: 10px;
     }
  
     .introcontainerlinks {
-        padding: 36px 32px 28px;
+        padding: 24px 18px 20px;
     }
  
     .introcontainertitle {
-        font-size: 22px;
+        font-size: 20px;
+    }
+ 
+    .introcontainerbody {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
  
     .introcontainerrechts {
-        width: 100%;
-        height: 280px;
+       
+    display: none;
     }
+    
  
     .introcontainerrechts::after {
-        background: linear-gradient(to bottom, #1a3a6e 0%, transparent 25%);
+        background: linear-gradient(to bottom, #1a3a6e 0%, transparent 30%);
     }
  
-    /* --- Diensten --- */
+    /* Diensten: 1 kolom */
     .diensten-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
- 
-    /* --- Quotes --- */
-    .quotes-sectie {
-        padding: 44px 32px;
-    }
- 
-    .quote-groot p {
-        font-size: 24px;
-    }
- 
-    .quote-accent {
-        font-size: 90px;
-    }
- 
-    .quotes-grid {
         grid-template-columns: 1fr;
         gap: 14px;
     }
  
-    /* --- Aanpak stappen --- */
+    /* Quotes */
+    .quotes-sectie {
+        padding: 32px 18px;
+    }
+ 
+    .quote-groot p {
+        font-size: 18px;
+    }
+ 
+    .quote-accent {
+        font-size: 64px;
+    }
+ 
+    .quotes-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+ 
+    .stroom-oneliners {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+ 
+    .oneliner-sep {
+        display: none;
+    }
+ 
+    /* Aanpak */
     .aanpak-stap {
-        grid-template-columns: 48px 1fr;
-        gap: 20px;
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        padding: 18px 0;
     }
  
     .aanpak-foto {
         display: none;
     }
  
-    /* --- Sections --- */
-    .section-block-links {
-        padding: 36px 32px;
+    .aanpak-tekst h3 {
+        font-size: 15px;
     }
  
-    .section-block-title {
-        font-size: 24px;
+    .aanpak-tekst p {
+        font-size: 13px;
     }
  
-    /* --- Contact --- */
-    .contactcontainer {
-        padding: 32px;
-    }
-}
- 
-/* ==============================================
-   LAPTOP  (769px – 1024px)
-   ============================================= */
-@media (min-width: 769px) and (max-width: 1024px) {
- 
-    /* --- Navigatie --- */
-    .navcontainer {
-        height: 90px;
-        padding: 0 24px;
+    /* Over: stapelt op gsm */
+    .over-container {
+        flex-direction: column;
     }
  
-    .logocontainer {
-        height: 68px;
-        width: 180px;
+    .over-foto {
+        width: 100%;
+        height: 220px;
     }
  
-    .linkNaarWebsite {
+    .over-tekst {
+        padding: 24px 18px;
+    }
+ 
+    .over-title {
         font-size: 20px;
     }
  
-    /* --- Main --- */
-    main {
-        padding: 0 20px 20px;
-        gap: 22px;
+    .over-lead {
+        font-size: 14px;
     }
  
-
-    /* --- Intro --- */
-    .introcontainer{
-        min-height: 520px;
-    }
-    .introcontainerlinks {
-        padding: 36px;
+    .over-body {
+        font-size: 13px;
     }
  
-    .introcontainertitle {
-        font-size: 23px;
+    /* Sections */
+    .section-block-links {
+        padding: 24px 18px;
     }
  
-    .introcontainerrechts {
-        width: 320px;
+    .section-block-title {
+        font-size: 20px;
     }
  
-    /* --- Diensten --- */
-    .diensten-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
- 
-    /* --- Quotes --- */
-    .quote-groot p {
-        font-size: 26px;
-    }
- 
-    /* --- Aanpak stappen --- */
-    .aanpak-stap {
-        grid-template-columns: 56px 1fr 180px;
-        gap: 20px;
-    }
- 
-    .aanpak-foto {
-        width: 180px;
-        height: 200px;
+    /* Contact */
+    .contactcontainer {
+        padding: 24px 18px;
+        border-radius: 10px;
     }
 }
  
+
 /* ==============================================
-   PC / GROOT SCHERM  (≥ 1025px)
+   PC / GROOT SCHERM  (≥ 1080px)
    Jouw bestaande stijlen gelden hier al.
    Hieronder alleen kleine verfijningen.
    ============================================= */
-@media (min-width: 1025px) {
+@media (min-width: 1080px) {
  
     .hamburger {
         display: none;
     }
- 
     .linkcontainer {
         display: flex !important;  /* altijd zichtbaar */
     }
- 
     .diensten-grid {
         grid-template-columns: repeat(3, 1fr);
     }
- 
+    .tagline{
+        font-size: 20px;
+    }
     .introcontainerrechts {
         width: 300px;
     }
     .introcontainertitle{
-        font-size: 70px;
+        font-size: 30px;
+    }
+    .introcontainerbody{
+        font-size: 25px;
     }
     .introcontainer{
-        min-height: 1440px;
-        max-width: 1840px;
+        min-height: 90vh;
+        max-width: 90vw;
+    }
+    .btn-primary{
+        font-size: 20px;
     }
 }

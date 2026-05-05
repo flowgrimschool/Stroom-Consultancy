@@ -15,8 +15,8 @@
     <nav class="navcontainer">
       <img src="img/Stroom_logo_def-1.jpg" alt="Stroom Consultancy" class="logocontainer">
       <div class="linkcontainer">
-        <a class="linkNaarWebsite" href="/index.html">Home</a>
-        <a class="linkNaarWebsite" href="/OverMij.html">Wie ben ik?</a>
+        <a class="linkNaarWebsite" href="index.html">Home</a>
+        <a class="linkNaarWebsite" href="OverMij.html">Wie ben ik?</a>
       </div>
       <button class="hamburger" aria-label="Menu openen" aria-expanded="false">
         <span></span>

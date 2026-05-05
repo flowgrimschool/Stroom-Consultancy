@@ -13,7 +13,7 @@
 /* ── 1. NAV HTML ─────────────────────────────────────────── */
   const NAV_HTML = `
     <nav class="navcontainer">
-      <img src="/img/Stroom_logo_def-1.jpg" alt="Stroom Consultancy" class="logocontainer">
+      <img src="img/Stroom_logo_def-1.jpg" alt="Stroom Consultancy" class="logocontainer">
       <div class="linkcontainer">
         <a class="linkNaarWebsite" href="/index.html">Home</a>
         <a class="linkNaarWebsite" href="/OverMij.html">Wie ben ik?</a>

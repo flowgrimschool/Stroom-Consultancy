@@ -564,6 +564,7 @@
     background-color: #023C7A;
     flex-direction: column;
     align-items: start;
+    border-radius: 5px, 5px;
 }
 .contactcontainer h4{
     margin: 0;
@@ -573,15 +574,13 @@
     color: white;
     text-decoration: none;   
 }
-
 /* ==============================================
-   RESPONSIVE.CSS
+   RESPONSIVE
  
    Breakpoints:
      gsm    : max 480px
-     tablet : 481px – 768px
-     laptop : 769px – 1024px
-     pc     : 1025px+  (jouw bestaande stijlen)
+     tablet : 481px – 1079px
+     pc     : 1080px+  (jouw bestaande stijlen)
    ============================================= */
  
 /* ==============================================
@@ -755,8 +754,7 @@
     }
  
     .over-foto {
-        width: 100%;
-        height: 260px;
+        display:none;
     }
  
     .over-tekst {
@@ -922,8 +920,7 @@
     }
  
     .over-foto {
-        width: 100%;
-        height: 220px;
+        display:none;
     }
  
     .over-tekst {
@@ -995,3 +992,397 @@
         font-size: 20px;
     }
 }
+/* =============================================
+   
+    WIE BEN IK
+    GEDEELTE
+
+   ============================================= */
+   .overmij-body {
+            background-color: #f4f4f0;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: 'Source Serif 4', Georgia, serif;
+        }
+        .overmij-main {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 0 24px 24px;
+            width: 100%;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        /* INTRO */
+        .overmij-intro {
+            background-color: #023C7A;
+            color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+            min-height: 380px;
+        }
+        .overmij-intro::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 20% 50%, #0e2342 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .overmij-intro-tekst {
+            padding: 56px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+        .overmij-intro-tagline {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 1.5rem 0;
+        }
+        .overmij-intro-titel {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 44px;
+            font-weight: 600;
+            color: white;
+            letter-spacing: -0.5px;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+        .overmij-intro-ondertitel {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 19px;
+            font-weight: 300;
+            color: #7ec8e3;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .overmij-intro-foto {
+            position: relative;
+            overflow: hidden;
+            width: 380px;
+            flex-shrink: 0;
+        }
+        .overmij-intro-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+        .overmij-intro-foto::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(to right, #023C7A 0%, transparent 30%);
+        }
+        /* INTRO */
+        .overmij-achtergrond {
+            background: white;
+            border-radius: 12px;
+            padding: 56px 48px;
+            display: flex;
+            gap: 56px;
+            align-items: flex-start;
+        }
+        .overmij-achtergrond-links { flex: 1.5; }
+        .overmij-achtergrond-rechts {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-top: 8px;
+        }
+        .overmij-achtergrond-tagline {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(2,60,122,0.45);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 1.5rem 0;
+        }
+        .overmij-achtergrond-titel {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #023C7A;
+            margin: 0 0 24px 0;
+            line-height: 1.3;
+        }
+        .overmij-achtergrond-lead {
+            font-size: 17px;
+            font-weight: 400;
+            color: #023C7A;
+            line-height: 1.85;
+            margin: 0 0 20px 0;
+        }
+        .overmij-achtergrond-body {
+            font-size: 15px;
+            font-weight: 300;
+            color: #444;
+            line-height: 1.85;
+            margin: 0 0 16px 0;
+        }
+        .overmij-achtergrond-body strong { color: #023C7A; font-weight: 500; }
+        .overmij-stat {
+            background: #f4f4f0;
+            border-radius: 10px;
+            padding: 20px 24px;
+            border-left: 3px solid #7ec8e3;
+        }
+        .overmij-stat-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #7ec8e3;
+            margin: 0 0 6px 0;
+        }
+        .overmij-stat-waarde {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #023C7A;
+            line-height: 1.55;
+            margin: 0;
+        }
+        /* AANPAK */
+        .overmij-aanpak {
+            background-color: #023C7A;
+            color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .overmij-aanpak::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 10% 40%, #2a64bd 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .overmij-aanpak-inner {
+            padding: 48px;
+            position: relative;
+            z-index: 1;
+        }
+        .overmij-aanpak-tagline {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 1.5rem 0;
+        }
+        .overmij-aanpak-titel {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: white;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
+        }
+        .overmij-aanpak-intro {
+            font-size: 16px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.75);
+            margin: 0 0 40px 0;
+            font-style: italic;
+            line-height: 1.75;
+        }
+        .overmij-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .overmij-tool-kaart {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(126,200,227,0.2);
+            border-radius: 10px;
+            padding: 24px 22px;
+        }
+        .overmij-tool-nr {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: rgba(126,200,227,0.3);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        .overmij-tool-naam {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #7ec8e3;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+        }
+        .overmij-tool-omschrijving {
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.7;
+            margin: 0;
+        }
+        /* WAAROM */
+        .overmij-waarom {
+            background: white;
+            border-radius: 12px;
+            padding: 56px 48px;
+        }
+        .overmij-waarom-tagline {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(2,60,122,0.45);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 1.5rem 0;
+        }
+        .overmij-waarom-titel {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #023C7A;
+            margin: 0 0 40px 0;
+            line-height: 1.3;
+        }
+        .overmij-waarom-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .overmij-waarom-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .overmij-waarom-streep {
+            width: 36px;
+            height: 2px;
+            background-color: #7ec8e3;
+        }
+        .overmij-waarom-tekst {
+            font-size: 15px;
+            font-weight: 300;
+            color: #444;
+            line-height: 1.8;
+            margin: 0;
+        }
+        /* QUOTE */
+        .overmij-quote-sectie {
+            background-color: #023C7A;
+            border-radius: 12px;
+            padding: 56px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .overmij-quote-sectie::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 80% 20%, #1a5fa8 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .overmij-quote-groot {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .overmij-quote-accent {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 120px;
+            line-height: 0.7;
+            color: rgba(126,200,227,0.25);
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+        .overmij-quote-groot p {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: white;
+            line-height: 1.45;
+            margin: 0;
+            font-style: italic;
+        }
+        /* CTA */
+        .overmij-cta {
+            background: white;
+            border-radius: 12px;
+            padding: 48px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+        }
+        .overmij-cta-tekst h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #023C7A;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
+        }
+        .overmij-cta-tekst p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+        }
+        /* RESPONSIVE */
+      @media (max-width: 1079px) {
+            .overmij-main { max-width: 90%; padding: 0 16px 16px; gap: 16px; }
+            .overmij-intro { flex-direction: row; min-height: auto; }
+            .overmij-intro-foto { display: block; width: 220px; min-width: 220px; height: auto; }
+            .overmij-intro-tekst { padding: 32px 24px; }
+            .overmij-intro-titel { font-size: 28px; }
+            .overmij-achtergrond { flex-direction: column; padding: 32px 24px; gap: 28px; }
+            .overmij-aanpak-inner { padding: 32px 24px; }
+            .overmij-tools-grid { grid-template-columns: repeat(2, 1fr); }
+            .overmij-waarom { padding: 32px 24px; }
+            .overmij-waarom-grid { grid-template-columns: 1fr; gap: 20px; }
+            .overmij-quote-sectie { padding: 40px 24px; }
+            .overmij-quote-groot p { font-size: 20px; }
+            .overmij-quote-accent { font-size: 80px; }
+            .overmij-cta { flex-direction: column; padding: 32px 24px; align-items: flex-start; }
+        }
+        @media (max-width: 480px) {
+            .overmij-main { max-width: 100%; padding: 0 12px 12px; gap: 12px; }
+            .overmij-intro { flex-direction: row; }
+            .overmij-intro-foto { display: block; width: 140px; min-width: 140px; height: auto; }
+            .overmij-intro-tekst { padding: 24px 18px; }
+            .overmij-intro-titel { font-size: 22px; }
+            .overmij-achtergrond { padding: 24px 18px; }
+            .overmij-aanpak-inner { padding: 24px 18px; }
+            .overmij-tools-grid { grid-template-columns: 1fr; }
+            .overmij-waarom { padding: 24px 18px; }
+            .overmij-quote-sectie { padding: 32px 18px; }
+            .overmij-quote-groot p { font-size: 17px; }
+            .overmij-quote-accent { font-size: 60px; }
+            .overmij-cta { padding: 24px 18px; }
+        }
+        @media (min-width: 1080px) {
+            .overmij-intro { min-height: 70vh; }
+            .overmij-intro-tagline { font-size: 16px; }
+            .overmij-intro-titel { font-size: 52px; }
+            .overmij-intro-ondertitel { font-size: 22px; }
+            .overmij-aanpak-tagline { font-size: 16px; }
+            .btn-dark { font-size: 18px; }
+        }

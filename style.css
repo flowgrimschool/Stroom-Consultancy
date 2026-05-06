@@ -1348,6 +1348,7 @@
         }
         /* RESPONSIVE */
       @media (max-width: 1079px) {
+        .linkcontainer{max-width: 100%;}
             .overmij-main { max-width: 90%; padding: 0 16px 16px; gap: 16px; }
             .overmij-intro { flex-direction: row; min-height: auto; }
             .overmij-intro-foto { display: block; width: 220px; min-width: 220px; height: auto; }

@@ -1366,7 +1366,7 @@
         @media (max-width: 480px) {
             .overmij-main { max-width: 90%; padding: 0 12px 12px; gap: 12px; }
             .overmij-intro { flex-direction: row; }
-            .overmij-intro-foto { display: block; width: 140px; min-width: 140px; height: auto; }
+            .overmij-intro-foto { display: block; width: 120px; min-width: 120px; height: auto; }
             .overmij-intro-tekst { padding: 24px 18px; }
             .overmij-intro-titel { font-size: 22px; }
             .overmij-achtergrond { padding: 24px 18px; }

@@ -1037,8 +1037,8 @@
     .introcontainerbody     { font-size: 30px; }
 
     /* ── Knoppen ── */
-    .btn-primary            { font-size: 30px; width: 32%;}
-    .btn-dark               { font-size: 30px; width: 32%;}
+    .btn-primary            { font-size: 30px; width: 25%;}
+    .btn-dark               { font-size: 30px; width: 25%;}
 
     /* ── Section titels & intro ── */
     .section-block-title    { font-size: 30px; }
@@ -1522,7 +1522,7 @@
  
             /* ── CTA ── */
             .overmij-cta-tekst h2       { font-size: 30px; }
-            .overmij-cta-tekst p        { font-size: 30px; }
+            .overmij-cta-tekst p        { font-size: 27px; }
             /* ── knop ── */
             .btn-dark-over-mij          { font-size: 30px; min-width: 70%; }
 

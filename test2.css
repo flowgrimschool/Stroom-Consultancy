@@ -990,6 +990,9 @@
     .section-block-title {
         font-size: 20px;
     }
+
+    /*knop*/
+    .btn-dark               { font-size: 40px; min-width: 50%;}
  
     /* Contact */
     .contactcontainer {

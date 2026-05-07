@@ -630,7 +630,10 @@
     flex-shrink: 0;
 }
 
-
+@media (max-width: 768px) {
+    .klanten-blok { padding: 32px 24px; }
+    .klant-naam { font-size: 14px; }
+}
 /* =============================================
    OVER STROOM
    ============================================= */
@@ -1167,6 +1170,50 @@
         padding: 24px 18px;
         border-radius: 10px;
     }
+    /* ── Footer ── */
+.footer-inner {
+    flex-direction: column;      /* naast elkaar → onder elkaar */
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+}
+
+.footer-contact {
+    align-items: flex-start;     /* e-mail links uitlijnen */
+    width: 100%;
+}
+
+.footer-links {
+    flex-direction: column;      /* knop volledige breedte */
+    width: 100%;
+}
+
+.footer-link {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-bodem {
+    padding: 16px 24px;          /* zijdelings padding kleiner */
+}
+
+/* ── Klanten blok ── */
+.klanten-blok {
+    padding: 28px 18px;
+}
+
+.klanten-titel {
+    font-size: 18px;
+    margin: 0 0 24px 0;
+}
+
+.klanten-rij {
+    gap: 6px 12px;
+}
+
+.klant-naam {
+    font-size: 13px;
+}
 }
  
 

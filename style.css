@@ -5,7 +5,6 @@
     margin: 0;
     font-family: 'Source Serif 4', Georgia, serif;
 }
-
 .indexmain {
     display: flex;
     flex-direction: column;
@@ -14,8 +13,24 @@
     width: 100%;
     max-width: 70%;
     margin: 0 auto;
+    z-index: 5;
 }
 
+.body-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-image: url('img/Stroom_logo_achtergond.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -1;   /* ligt OVER alles */
+}
 /* =============================================
    NAVIGATIE
    ============================================= */
@@ -63,6 +78,123 @@
 .linkNaarWebsite.active {
     border-bottom: 2px solid #023C7A;
     padding-bottom: 2px;
+}
+/* =============================================
+   FOOTER
+   ============================================= */
+.contactcontainer {
+    background-color: #012d5c;
+    color: white;
+    border-radius: 12px;
+    margin-top: 8px;
+    overflow: hidden;
+    position: relative;
+}
+ 
+.contactcontainer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 90% 0%, #1a5fa8 0%, transparent 55%);
+    pointer-events: none;
+}
+ 
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 48px 56px;
+    position: relative;
+    z-index: 1;
+}
+ 
+.footer-merk {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.footer-tagline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+ 
+.footer-ondertitel {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+}
+ 
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+}
+ 
+.footer-vraag {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+ 
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+ 
+.footer-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(126,200,227,0.2);
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: background 0.25s, border-color 0.25s;
+}
+ 
+.footer-link:hover {
+    background: rgba(126,200,227,0.15);
+    border-color: rgba(126,200,227,0.5);
+}
+ 
+.footer-link-icon {
+    font-size: 17px;
+    color: #7ec8e3;
+    flex-shrink: 0;
+}
+ 
+.footer-bodem {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 56px;
+    position: relative;
+    z-index: 1;
+}
+ 
+.footer-bodem p {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+    margin: 0;
 }
 /* =============================================
    GEDEELDE TAGLINE
@@ -155,7 +287,7 @@
       background: linear-gradient(to right, #1a3a6e 0%, transparent 20%);
 }
 /* =============================================
-   KNOPPEN
+   KNOPPEN index
    ============================================= */
 .btn-primary {
     display: inline-block;
@@ -178,7 +310,7 @@
     background-color: #023C7A;
     color: white;
     border: 2px solid #023C7A;
-    max-width: 16%;
+    
 }
 
 .btn-dark:hover {
@@ -333,6 +465,7 @@
     color: rgba(126,200,227,0.25);
     flex-shrink: 0;
     margin-top: 8px;
+    
 }
 
 .quote-blok-groot-inner p {
@@ -343,6 +476,8 @@
     line-height: 1.35;
     margin: 0;
     font-style: italic;
+    display: flex;
+    align-self: center;
 }
 
 /* Blok 2 — enkelvoudige quote op wit met blauwe linkerborder */
@@ -443,6 +578,63 @@
     display: block;
 }
 /* =============================================
+   KLANTEN BLOK
+   ============================================= */
+.klanten-blok {
+    background-color: white;
+    border-radius: 12px;
+    padding: 48px 56px;
+    text-align: center;
+}
+
+.klanten-tagline {
+    color: rgba(2, 60, 122, 0.45) !important;
+}
+
+.klanten-titel {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #023C7A;
+    margin: 0 0 36px 0;
+    letter-spacing: -0.2px;
+}
+
+.klanten-rij {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 16px;
+}
+
+.klant-naam {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: color 0.25s;
+}
+
+.klant-naam:hover {
+    color: #023C7A;
+}
+
+.klant-scheiding {
+    color: #7ec8e3;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .klanten-blok { padding: 32px 24px; }
+    .klant-naam { font-size: 14px; }
+}
+/* =============================================
    OVER STROOM
    ============================================= */
 .over-container {
@@ -531,25 +723,7 @@
     left: 0;
     color: #7ec8e3;
 }
-/* =============================================
-   FOOTER
-   ============================================= */
-.contactcontainer{
-    display: flex;
-    color: white;
-    background-color: #023C7A;
-    flex-direction: column;
-    align-items: start;
-    border-radius: 5px, 5px;
-}
-.contactcontainer h4{
-    margin: 0;
-    padding: 0;
-}
-.contactgegevens{
-    color: white;
-    text-decoration: none;   
-}
+
 /* ==============================================
    RESPONSIVE
  
@@ -987,12 +1161,59 @@
     .section-block-title {
         font-size: 20px;
     }
+
+    /*knop*/
+    .btn-dark { font-size: 18px; width: 80%;}
  
     /* Contact */
     .contactcontainer {
         padding: 24px 18px;
         border-radius: 10px;
     }
+    /* ── Footer ── */
+.footer-inner {
+    flex-direction: column;      /* naast elkaar → onder elkaar */
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+}
+
+.footer-contact {
+    align-items: flex-start;     /* e-mail links uitlijnen */
+    width: 100%;
+}
+
+.footer-links {
+    flex-direction: column;      /* knop volledige breedte */
+    width: 100%;
+}
+
+.footer-link {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-bodem {
+    padding: 16px 24px;          /* zijdelings padding kleiner */
+}
+
+/* ── Klanten blok ── */
+.klanten-blok {
+    padding: 28px 18px;
+}
+
+.klanten-titel {
+    font-size: 18px;
+    margin: 0 0 24px 0;
+}
+
+.klanten-rij {
+    gap: 6px 12px;
+}
+
+.klant-naam {
+    font-size: 13px;
+}
 }
  
 
@@ -1002,35 +1223,66 @@
    Hieronder alleen kleine verfijningen.
    ============================================= */
 @media (min-width: 1080px) {
- 
+
     .hamburger {
         display: none;
     }
     .linkcontainer {
-        display: flex !important;  /* altijd zichtbaar */
+        display: flex !important;
     }
     .diensten-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .tagline{
-        font-size: 20px;
-    }
     .introcontainerrechts {
         width: 300px;
     }
-    .introcontainertitle{
-        font-size: 30px;
-    }
-    .introcontainerbody{
-        font-size: 25px;
-    }
-    .introcontainer{
+    .introcontainer {
         min-height: 90vh;
         max-width: 90vw;
     }
-    .btn-primary{
-        font-size: 20px;
-    }
+
+    /* ── Navigatie ── */
+    .linkNaarWebsite        { font-size: 25px; }
+
+    /* ── Taglines ── */
+    .tagline                { font-size: 30px; }
+
+    /* ── Intro ── */
+    .introcontainertitle    { font-size: 30px; }
+    .introcontainerbody     { font-size: 30px; }
+
+    /* ── Knoppen ── */
+    .btn-primary            { font-size: 30px; width: 25%;}
+    .btn-dark               { font-size: 30px; width: 25%;}
+
+    /* ── Section titels & intro ── */
+    .section-block-title    { font-size: 30px; }
+    .section-block-intro    { font-size: 30px; }
+
+    /* ── Diensten ── */
+    .dienst-nr              { font-size: 30px; }
+    .dienst-card h3         { font-size: 30px; }
+    .dienst-card p,
+    .dienst-card ul         { font-size: 30px; }
+    .dienst-footer          { font-size: 30px !important; }
+
+    /* ── Quote blokken ── */
+    .quote-accent           { font-size: 200px; }
+    .quote-blok-groot-inner p { font-size: 30px; }
+    .quote-blok-enkelvoudig .quote-categorie { font-size: 30px; }
+    .quote-blok-enkelvoudig p { font-size: 30px; }
+    .quote-blok-oneliner p  { font-size: 30px; }
+
+    /* ── Aanpak ── */
+    .aanpak-tekst h3        { font-size: 30px; }
+    .aanpak-tekst p         { font-size: 30px; }
+    .aanpak-nr              {font-size: 30px;   }
+
+    /* ── Over Stroom ── */
+    .over-title             { font-size: 30px; }
+    .over-lead              { font-size: 30px; }
+    .over-body              { font-size: 30px; }
+    .over-punten li         { font-size: 30px; }
 }
 /* =============================================
    
@@ -1044,6 +1296,7 @@
             padding: 0;
             margin: 0;
             font-family: 'Source Serif 4', Georgia, serif;
+            position: relative;
         }
         .overmij-main {
             display: flex;
@@ -1053,6 +1306,7 @@
             width: 100%;
             max-width: 70%;
             margin: 0 auto;
+            z-index: 5;
         }
         /* INTRO */
         .overmij-intro {
@@ -1359,6 +1613,8 @@
             line-height: 1.45;
             margin: 0;
             font-style: italic;
+            display: flex;
+            align-self: center;
         }
         /* CTA */
         .overmij-cta {
@@ -1386,6 +1642,37 @@
             line-height: 1.7;
             margin: 0;
         }
+.btn-primary-over-mij {
+    display: inline-block;
+    background-color: #7ec8e3;
+    color: #023C7A;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary-over-mij:hover {
+    background-color: #5ab8d8;
+    transform: translateY(-1px);
+}
+.btn-dark-over-mij {
+    background-color: #023C7A;
+    color: white;
+    border: 2px solid #023C7A;
+    
+}
+
+.btn-dark-over-mij:hover {
+    background-color: #012d5c;
+}
+
+
+
+
         /* RESPONSIVE */
       @media (max-width: 1079px) {
             .overmij-main { max-width: 90%; padding: 0 16px 16px; gap: 16px; }
@@ -1417,12 +1704,44 @@
             .overmij-quote-groot p { font-size: 17px; }
             .overmij-quote-accent { font-size: 60px; }
             .overmij-cta { padding: 24px 18px; }
+            .btn-dark-over-mij{ font-size: 20px; min-width: 40%; }
         }
         @media (min-width: 1080px) {
             .overmij-intro { min-height: 70vh; }
-            .overmij-intro-tagline { font-size: 16px; }
-            .overmij-intro-titel { font-size: 52px; }
-            .overmij-intro-ondertitel { font-size: 22px; }
-            .overmij-aanpak-tagline { font-size: 16px; }
-            .btn-dark { font-size: 18px; }
+ 
+            /* ── Intro ── */
+            .overmij-intro-tagline      { font-size: 30px; }
+            .overmij-intro-titel        { font-size: 30px; }
+            .overmij-intro-ondertitel   { font-size: 30px; }
+ 
+            /* ── Achtergrond ── */
+            .overmij-achtergrond-tagline { font-size: 30px; }
+            .overmij-achtergrond-titel  { font-size: 30px; }
+            .overmij-achtergrond-lead   { font-size: 30px; }
+            .overmij-achtergrond-body   { font-size: 30px; }
+            .overmij-stat-label         { font-size: 30px; }
+            .overmij-stat-waarde        { font-size: 30px; }
+ 
+            /* ── Aanpak / Tools ── */
+            .overmij-aanpak-tagline     { font-size: 30px; }
+            .overmij-aanpak-titel       { font-size: 30px; }
+            .overmij-aanpak-intro       { font-size: 30px; }
+            .overmij-tool-nr            { font-size: 30px; }
+            .overmij-tool-naam          { font-size: 30px; }
+            .overmij-tool-omschrijving  { font-size: 30px; }
+ 
+            /* ── Waarom ── */
+            .overmij-waarom-tagline     { font-size: 30px; }
+            .overmij-waarom-titel       { font-size: 30px; }
+            .overmij-waarom-tekst       { font-size: 30px; }
+ 
+            /* ── Quote ── */
+            .overmij-quote-groot p      { font-size: 30px; }
+ 
+            /* ── CTA ── */
+            .overmij-cta-tekst h2       { font-size: 30px; }
+            .overmij-cta-tekst p        { font-size: 27px; }
+            /* ── knop ── */
+            .btn-dark-over-mij          { font-size: 30px; min-width: 70%; }
+
         }

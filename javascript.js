@@ -26,14 +26,26 @@
     </nav>`;
  
   /* ── 2. FOOTER HTML ──────────────────────────────────────── */
-  const FOOTER_HTML = `
+   const FOOTER_HTML = `
     <footer class="contactcontainer">
-      <h3>contact gegevens</h3>
-      <p>
-        Wil je je leiderschapsteam versterken, verandering versnellen of
-        vastgelopen processen weer laten stromen?<br>
-        <a class="contactgegevens" href="mailto:info@stroom-consultancy.be">stuur een mail</a>
-      </p>
+      <div class="footer-inner">
+        <div class="footer-merk">
+          <p class="footer-tagline">Stroom‑Consultancy</p>
+          <p class="footer-ondertitel">Brengt beweging in leiderschap, teams en organisaties.</p>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-vraag">Klaar om in gesprek te gaan?</p>
+          <div class="footer-links">
+            <a class="footer-link" href="mailto:info@stroom-consultancy.be">
+              <span class="footer-link-icon">✉</span>
+              <span>info@stroom-consultancy.be</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bodem">
+        <p>© Stroom‑Consultancy · Alle rechten voorbehouden</p>
+      </div>
     </footer>`;
  
   /* ── 3. INJECT ───────────────────────────────────────────── */

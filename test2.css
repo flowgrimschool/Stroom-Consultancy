@@ -992,7 +992,7 @@
     }
 
     /*knop*/
-    .btn-dark { font-size: 20px; width: 30%;}
+    .btn-dark { font-size: 18px; width: 75%;}
  
     /* Contact */
     .contactcontainer {
@@ -1030,43 +1030,43 @@
     .linkNaarWebsite        { font-size: 25px; }
 
     /* ── Taglines ── */
-    .tagline                { font-size: 40px; }
+    .tagline                { font-size: 30px; }
 
     /* ── Intro ── */
-    .introcontainertitle    { font-size: 40px; }
-    .introcontainerbody     { font-size: 40px; }
+    .introcontainertitle    { font-size: 30px; }
+    .introcontainerbody     { font-size: 30px; }
 
     /* ── Knoppen ── */
-    .btn-primary            { font-size: 40px; width: 32%;}
-    .btn-dark               { font-size: 40px; width: 32%;}
+    .btn-primary            { font-size: 30px; width: 32%;}
+    .btn-dark               { font-size: 30px; width: 32%;}
 
     /* ── Section titels & intro ── */
-    .section-block-title    { font-size: 40px; }
-    .section-block-intro    { font-size: 40px; }
+    .section-block-title    { font-size: 30px; }
+    .section-block-intro    { font-size: 30px; }
 
     /* ── Diensten ── */
-    .dienst-nr              { font-size: 40px; }
-    .dienst-card h3         { font-size: 40px; }
+    .dienst-nr              { font-size: 30px; }
+    .dienst-card h3         { font-size: 30px; }
     .dienst-card p,
-    .dienst-card ul         { font-size: 40px; }
-    .dienst-footer          { font-size: 40px !important; }
+    .dienst-card ul         { font-size: 30px; }
+    .dienst-footer          { font-size: 30px !important; }
 
     /* ── Quote blokken ── */
-    .quote-accent           { font-size: 240px; }
-    .quote-blok-groot-inner p { font-size: 40px; }
-    .quote-blok-enkelvoudig .quote-categorie { font-size: 40px; }
-    .quote-blok-enkelvoudig p { font-size: 40px; }
-    .quote-blok-oneliner p  { font-size: 40px; }
+    .quote-accent           { font-size: 200px; }
+    .quote-blok-groot-inner p { font-size: 30px; }
+    .quote-blok-enkelvoudig .quote-categorie { font-size: 30px; }
+    .quote-blok-enkelvoudig p { font-size: 30px; }
+    .quote-blok-oneliner p  { font-size: 30px; }
 
     /* ── Aanpak ── */
     .aanpak-tekst h3        { font-size: 40px; }
     .aanpak-tekst p         { font-size: 40px; }
 
     /* ── Over Stroom ── */
-    .over-title             { font-size: 40px; }
-    .over-lead              { font-size: 40px; }
-    .over-body              { font-size: 40px; }
-    .over-punten li         { font-size: 40px; }
+    .over-title             { font-size: 30px; }
+    .over-lead              { font-size: 30px; }
+    .over-body              { font-size: 30px; }
+    .over-punten li         { font-size: 30px; }
 }
 /* =============================================
    
@@ -1492,38 +1492,38 @@
             .overmij-intro { min-height: 70vh; }
  
             /* ── Intro ── */
-            .overmij-intro-tagline      { font-size: 40px; }
-            .overmij-intro-titel        { font-size: 40px; }
-            .overmij-intro-ondertitel   { font-size: 40px; }
+            .overmij-intro-tagline      { font-size: 30px; }
+            .overmij-intro-titel        { font-size: 30px; }
+            .overmij-intro-ondertitel   { font-size: 30px; }
  
             /* ── Achtergrond ── */
-            .overmij-achtergrond-tagline { font-size: 40px; }
-            .overmij-achtergrond-titel  { font-size: 40px; }
-            .overmij-achtergrond-lead   { font-size: 40px; }
-            .overmij-achtergrond-body   { font-size: 40px; }
-            .overmij-stat-label         { font-size: 40px; }
-            .overmij-stat-waarde        { font-size: 40px; }
+            .overmij-achtergrond-tagline { font-size: 30px; }
+            .overmij-achtergrond-titel  { font-size: 30px; }
+            .overmij-achtergrond-lead   { font-size: 30px; }
+            .overmij-achtergrond-body   { font-size: 30px; }
+            .overmij-stat-label         { font-size: 30px; }
+            .overmij-stat-waarde        { font-size: 30px; }
  
             /* ── Aanpak / Tools ── */
-            .overmij-aanpak-tagline     { font-size: 40px; }
-            .overmij-aanpak-titel       { font-size: 40px; }
-            .overmij-aanpak-intro       { font-size: 40px; }
-            .overmij-tool-nr            { font-size: 40px; }
-            .overmij-tool-naam          { font-size: 40px; }
-            .overmij-tool-omschrijving  { font-size: 40px; }
+            .overmij-aanpak-tagline     { font-size: 30px; }
+            .overmij-aanpak-titel       { font-size: 30px; }
+            .overmij-aanpak-intro       { font-size: 30px; }
+            .overmij-tool-nr            { font-size: 30px; }
+            .overmij-tool-naam          { font-size: 30px; }
+            .overmij-tool-omschrijving  { font-size: 30px; }
  
             /* ── Waarom ── */
-            .overmij-waarom-tagline     { font-size: 40px; }
-            .overmij-waarom-titel       { font-size: 40px; }
-            .overmij-waarom-tekst       { font-size: 40px; }
+            .overmij-waarom-tagline     { font-size: 30px; }
+            .overmij-waarom-titel       { font-size: 30px; }
+            .overmij-waarom-tekst       { font-size: 30px; }
  
             /* ── Quote ── */
-            .overmij-quote-groot p      { font-size: 40px; }
+            .overmij-quote-groot p      { font-size: 30px; }
  
             /* ── CTA ── */
-            .overmij-cta-tekst h2       { font-size: 40px; }
-            .overmij-cta-tekst p        { font-size: 40px; }
+            .overmij-cta-tekst h2       { font-size: 30px; }
+            .overmij-cta-tekst p        { font-size: 30px; }
             /* ── knop ── */
-            .btn-dark-over-mij          { font-size: 40px; min-width: 70%; }
+            .btn-dark-over-mij          { font-size: 30px; min-width: 70%; }
 
         }
